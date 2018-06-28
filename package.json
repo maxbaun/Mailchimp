@@ -1,0 +1,19 @@
+{
+  "name": "mailchimp",
+  "version": "1.0.0",
+  "description": "An API for mailchimp",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maxbaun/Mailchimp.git"
+  },
+  "author": "Max Baun",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/maxbaun/Mailchimp/issues"
+  },
+  "homepage": "https://github.com/maxbaun/Mailchimp#readme"
+}
