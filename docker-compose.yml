@@ -1,0 +1,25 @@
+version: '2.1'
+
+services:
+  nodeApp:
+    image: node:7.8.0-slim
+    command: /app/node_modules/.bin/babel-watch src/index.js
+    working_dir: /app
+    volumes:
+      - /etc/localtime:/etc/localtime
+    environment:
+      - ENV=dev
+      - AUTHORIZATION_HEADER_KEY=key
+      - SESSION_TOKEN_KEY=key
+      - USER_TOKEN_SECRET_KEY=key
+      - MONGO_1_PORT_27017_TCP_ADDR=mongo
+      - GOOGLE_MAPS_KEY=AIzaSyD_k1bjJAQM7FFvuiS7SPgjQWQ4LhZAvrw
+      - DBNAME=yerbae
+
+  app:
+    extends:
+      service: nodeApp
+    ports:
+      - "8000:9000"
+    volumes:
+      - /:/app
