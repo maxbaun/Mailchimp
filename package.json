@@ -7,7 +7,8 @@
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"build": "babel ./src -d public",
 		"start": "NODE_ENV=production node public/index.js",
-		"dev": "NODE_ENV=development node_modules/.bin/babel-watch index.js"
+		"dev": "NODE_ENV=development node_modules/.bin/babel-watch index.js",
+		"postinstall": "npm run build"
 	},
 	"repository": {
 		"type": "git",
