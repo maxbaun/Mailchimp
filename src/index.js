@@ -2,7 +2,7 @@ import Hapi from 'hapi';
 
 const port = process.env.PORT || 9001;
 
-// const isDev = process.env.NODE_ENV === 'development';
+// Const isDev = process.env.NODE_ENV === 'development';
 
 const Server = new Hapi.Server({
 	port,
@@ -25,7 +25,7 @@ const Server = new Hapi.Server({
 
 async function beginServer() {
 	try {
-		await Server.register([require('./controllers/list')]);
+		await Server.register([require('./health'), require('./controllers/list')]);
 
 		console.log(`Server is running on port ${port}`);
 
